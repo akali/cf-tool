@@ -10,10 +10,10 @@ import (
 	"strconv"
 	"strings"
 
+	"cf-tool/client"
+	"cf-tool/config"
+	"cf-tool/util"
 	"github.com/fatih/color"
-	"github.com/xalanq/cf-tool/client"
-	"github.com/xalanq/cf-tool/config"
-	"github.com/xalanq/cf-tool/util"
 )
 
 // Eval args
@@ -48,6 +48,8 @@ func Eval(args map[string]interface{}) error {
 		return Upgrade(args["{version}"].(string))
 	} else if args["status"].(bool) {
 		return Status(args)
+	} else if args["handles"].(bool) {
+		return Handles(args)
 	}
 	return nil
 }
