@@ -50,6 +50,8 @@ func Eval(args map[string]interface{}) error {
 		return Status(args)
 	} else if args["handles"].(bool) {
 		return Handles(args)
+	} else if args["statuses"].(bool) {
+		return UserStatuses(args)
 	}
 	return nil
 }

@@ -23,6 +23,7 @@ Usage:
   cf upgrade
   cf status <username>
   cf handles
+  cf statuses [<handles>]
 
 Examples:
   cf config            Configure the cf-tool.
